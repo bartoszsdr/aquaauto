@@ -1,5 +1,6 @@
 @use './reset' as *;
 @use './colors' as *;
+@use './animations' as *;
 
 body {
 	display: flex;
@@ -26,8 +27,8 @@ body {
 	top: 0;
 	width: 100%;
 	background-color: $black;
-	border-bottom: 1px solid $grey;
-	z-index: 1;
+	border-bottom: 1px solid $dark-grey;
+	z-index: 5;
 
 	&__nav {
 		display: flex;
@@ -38,8 +39,8 @@ body {
 
 	&__logo {
 		img {
-			margin-left: 0.6em;
-			height: 60px;
+			margin: 0.7em 0 0 0.6em;
+			height: 65px;
 		}
 	}
 
@@ -109,9 +110,10 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		height: 60vh;
+		height: 75vh;
 		max-height: 600px;
 		width: 100%;
+		margin: -70px 0 60px 0;
 		padding: 1em;
 		text-align: left;
 		color: $white;
@@ -121,8 +123,8 @@ body {
 		}
 
 		&--underline {
-			margin-top: 10px;
-			border-bottom: 3px solid $main-color;
+			// margin-top: 10px;
+			border-bottom: 5px solid $main-color;
 		}
 	}
 }
@@ -133,7 +135,7 @@ body {
 
 .offer {
 	padding: 1.5em 0 1.5em 0;
-	background-color: $dark;
+	background-color: $black;
 
 	&__box {
 		margin-top: 2em;
@@ -157,14 +159,66 @@ body {
 
 ///
 
-/// PORTFOLIO
+/// NEWS
 
-.portfolio {
+.news {
 	padding: 1.5em 0 1.5em 0;
-	background-color: $black;
+	background-color: $dark;
+	.fb-page {
+		width: 100%;
+	}
 }
 
 ///
+
+/// PORTFOLIO
+
+.portfolio {
+	position: relative;
+	padding: 1.5em 0 1.5em 0;
+	background-color: $black;
+	overflow: hidden;
+	z-index: 0;
+	.portfolio-section-strip {
+		position: absolute;
+		width: 1000px;
+		height: 50px;
+		top: 255px;
+		left: -200px;
+		background-color: rgba(255, 0, 0, 0.5);
+		transform: rotate(145deg);
+		z-index: -1;
+	}
+	&__boxes {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__box {
+		margin: 1.5em;
+	}
+	&__img {
+		position: relative;
+		width: 300px;
+		z-index: 0;
+	}
+	&__text {
+		position: absolute;
+		margin-top: -1.5em;
+		left: 15px;
+		width: 150px;
+		text-align: center;
+		background-color: $black;
+		border: 1px solid $main-color;
+		border-radius: 15px;
+		z-index: 1;
+	}
+}
+
+///
+
+/// PRICING
 
 .pricing {
 	position: relative;
@@ -173,7 +227,7 @@ body {
 	overflow: hidden;
 	z-index: 0;
 
-	.section-strip {
+	.pricing-section-strip {
 		position: absolute;
 		width: 1000px;
 		height: 50px;
@@ -257,6 +311,59 @@ body {
 		}
 	}
 }
+
+///
+
+/// REVIEWS
+
+// @media (max-width: 767px) {
+// 	.reviews.section-padding {
+// 		padding: 6em 0;
+// 	}
+// }
+
+.reviews {
+	padding: 1.5em 0 1.5em 0;
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 1.5em;
+		border-radius: 8px;
+		background-color: $dark-grey;
+		box-shadow: 3px 3px 10px #2e2e2e2e;
+		transition: transform 0.3s;
+		&:hover {
+			transform: scale(0.95);
+		}
+	}
+	&__box-img {
+		position: absolute;
+		top: 8%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+		img {
+			width: 80px;
+			height: 80px;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+	&__box-quote {
+		margin-bottom: 0.8em;
+		font-size: 3rem;
+		color: $main-color;
+	}
+	&__box-text {
+		margin-bottom: 1em;
+		font-size: 1.4rem;
+		color: $white;
+	}
+	&__box-person {
+		font-weight: 700;
+	}
+}
+
+///
 
 /// CONTACT
 
@@ -417,7 +524,7 @@ body {
 /// PRIVACY POLICY
 
 .privacy-policy {
-	margin-top: 2.5em;
+	margin-top: 1.8em;
 	font-size: 1.4rem;
 	background-color: $dark;
 	color: $white;
@@ -427,7 +534,7 @@ body {
 	}
 
 	&__box {
-		margin-bottom: 2em;
+		margin: 4em 0 2em 0;
 		font-size: 1.4rem;
 		flex-grow: 1;
 	}
@@ -459,7 +566,7 @@ body {
 .footer {
 	flex-shrink: 0;
 	text-align: center;
-	border-top: 1px solid $grey;
+	border-top: 1px solid $dark-grey;
 	background-color: $dark;
 
 	&__copy {
