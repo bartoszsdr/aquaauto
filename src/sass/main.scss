@@ -162,6 +162,9 @@ body {
 /// NEWS
 
 .news {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 1.5em 0 1.5em 0;
 	background-color: $dark;
 	.fb-page {
@@ -216,6 +219,29 @@ body {
 	}
 }
 
+.gallery {
+	margin-top: 5em;
+	padding: 1.5em 0 1.5em 0;
+	font-size: 1.6rem;
+	color: $white;
+	img {
+		margin-bottom: 0.5em;
+		max-width: 100%;
+	}
+	&__info {
+		margin-bottom: 1.2em;
+	}
+	&__text {
+		margin-bottom: 0.8em;
+	}
+	&__list {
+		margin-left: 1em;
+	}
+	&__list-inner {
+		margin-left: 2em;
+	}
+}
+
 ///
 
 /// PRICING
@@ -236,6 +262,13 @@ body {
 		background-color: rgba(255, 0, 0, 0.5);
 		transform: rotate(35deg);
 		z-index: -1;
+	}
+
+	&__boxes {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 	}
 
 	&__box {

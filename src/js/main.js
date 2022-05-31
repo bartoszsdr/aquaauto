@@ -112,6 +112,27 @@ portfolioSectionText.forEach(section => {
 
 ///
 
+///.gallery images OBSERVER
+
+const gallerySection = document.querySelectorAll('.gallery__box img');
+
+const observerThree = new IntersectionObserver(
+	entries => {
+		entries.forEach(entry => {
+			entry.target.classList.toggle('animation-three', entry.isIntersecting);
+			if (entry.isIntersecting) observerThree.unobserve(entry.target);
+		});
+	},
+	{
+		threshold: 0,
+	}
+);
+gallerySection.forEach(section => {
+	observerThree.observe(section);
+});
+
+///
+
 /// START
 
 window.addEventListener('scroll', handleScrollSpy);
