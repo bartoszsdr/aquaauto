@@ -1,4 +1,15 @@
-let logo, burgerBtn, navbar, menu, menuItems, menuLinks, footerYear, scrollSpySections, contactSection;
+let logo,
+	burgerBtn,
+	navbar,
+	menu,
+	menuItems,
+	menuLinks,
+	footerYear,
+	scrollSpySections,
+	contactSection,
+	cookieBox,
+	cookieBtn,
+	messageBtn;
 
 const prepareDOMElements = () => {
 	logo = document.querySelector('.navbar__logo');
@@ -10,6 +21,9 @@ const prepareDOMElements = () => {
 	footerYear = document.querySelector('.footer__year');
 	contactSection = document.querySelector('.navbar__item:nth-last-child(1)');
 	scrollSpySections = document.querySelectorAll('.scrollspy');
+	cookieBox = document.querySelector('.cookie-alert');
+	cookieBtn = document.querySelector('.cookie-btn');
+	messageBtn = document.querySelector('.message-btn');
 };
 
 const prepareDOMEvents = () => {
@@ -17,6 +31,8 @@ const prepareDOMEvents = () => {
 	burgerBtn.addEventListener('click', showMenu);
 	menuItems.forEach(item => item.addEventListener('click', closeMenu));
 	menuLinks.forEach(link => link.addEventListener('click', handleActiveClass));
+	cookieBtn.addEventListener('click', hideCookieBox);
+	messageBtn.addEventListener('click', hideMessageBox);
 };
 
 const showMenu = () => {
@@ -39,6 +55,23 @@ const handleActiveClass = e => {
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
 	footerYear.textContent = year;
+};
+
+const showCookieBox = () => {
+	const cookies = localStorage.getItem('cookie');
+	if (cookies) {
+		cookieBox.classList.add('hidden-cookies');
+	}
+};
+
+const hideCookieBox = () => {
+	localStorage.setItem('cookie', 'true');
+	cookieBox.classList.add('hidden-cookies');
+};
+
+const hideMessageBox = () => {
+	messageBox.classList.remove('show-message');
+	messageBox.classList.add('hidden-message');
 };
 
 // SCROLLSPY
@@ -140,3 +173,4 @@ window.addEventListener('scroll', handleScrollSpy);
 prepareDOMElements();
 prepareDOMEvents();
 handleCurrentYear();
+showCookieBox();
