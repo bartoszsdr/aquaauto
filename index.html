@@ -14,15 +14,13 @@
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/a7e8fa5308.js" crossorigin="anonymous"></script>
     <!-- Slick -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- AnimateCSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+    <!-- glide.js -->
+    <link rel="stylesheet" href="./dist/css/glide.core.min.css">
     <!-- Calendly -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <!-- Photoswipe -->
     <link rel="stylesheet" href="./dist/photoswipe/photoswipe.css">
-    <!-- Google reCaptcha -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="./dist/css/hamburgers.min.css">
     <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
@@ -39,7 +37,7 @@
         <div class="container">
             <div class="navbar__nav">
                 <div class="navbar__logo">
-                    <a href="#"><img src="/dist/img/logo.png" alt="Logo Aqua Auto"></a>
+                    <a href="#"><img src="/dist/img/logo.webp" alt="Logo Aqua Auto"></a>
                 </div>
                 <ul class="navbar__list">
                     <li class="navbar__item"><a href="#offer">oferta</a></li>
@@ -48,7 +46,8 @@
                     <li class="navbar__item"><a href="#pricing">cennik</a></li>
                     <li class="navbar__item "><a href="#contact">kontakt</a></li>
                 </ul>
-                <button class="navbar__burger-btn hamburger hamburger--slider" type="button">
+                <button class="navbar__burger-btn hamburger hamburger--slider" aria-label="Hamburger Menu"
+                    type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
@@ -109,7 +108,8 @@
                 <div class="portfolio__boxes">
                     <div class="portfolio__box">
                         <a href="bmw-m2.html">
-                            <img class="portfolio__img" src="./dist/img/portfolio2-1-small.jpg" alt="Niebieskie BMW M2">
+                            <img class="portfolio__img" src="./dist/img/portfolio2-1-small.webp"
+                                alt="Niebieskie BMW M2">
                         </a>
                         <div class="portfolio__text">
                             <p>BMW M2</p>
@@ -117,7 +117,7 @@
                     </div>
                     <div class="portfolio__box">
                         <a href="bmw-7.html">
-                            <img class="portfolio__img" src="./dist/img/portfolio3-1-small.jpeg" alt="Czarne BMW 7">
+                            <img class="portfolio__img" src="./dist/img/portfolio3-1-small.webp" alt="Czarne BMW 7">
                         </a>
                         <div class="portfolio__text">
                             <p>BMW 7</p>
@@ -125,7 +125,7 @@
                     </div>
                     <div class="portfolio__box">
                         <a href="audi-rs.html">
-                            <img class="portfolio__img" src="./dist/img/portfolio1-1-small.jpg"
+                            <img class="portfolio__img" src="./dist/img/portfolio1-1-small.webp"
                                 alt="Niebieskie Audi RS">
                         </a>
                         <div class="portfolio__text">
@@ -220,44 +220,51 @@
         <section class="reviews">
             <div class="wrapper">
                 <h2 class="section-title">opinie</h2>
-                <div class="reviews__boxes">
-                    <div class="reviews__box">
-                        <div class="reviews__box-img"><img src="./dist/img/reviews1.jpg" alt="John Doe"></div>
-                        <div class="reviews__box-info">
-                            <div class="reviews__box-quote">
-                                <i class="fas fa-quote-right"></i>
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <div class="reviews__boxes glide__slides">
+                            <div class="reviews__box glide__slide">
+                                <div class="reviews__box-img"><img src="./dist/img/reviews1.webp" alt="John Doe"></div>
+                                <div class="reviews__box-info">
+                                    <div class="reviews__box-quote">
+                                        <i class="fas fa-quote-right"></i>
+                                    </div>
+                                    <p class="reviews__box-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor excepturi
+                                        eligendi,
+                                        officiis odio iste quos natus soluta amet officia. Reiciendis.
+                                    </p>
+                                    <p class="reviews__box-person">John Doe</p>
+                                </div>
                             </div>
-                            <p class="reviews__box-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor excepturi eligendi,
-                                officiis odio iste quos natus soluta amet officia. Reiciendis.
-                            </p>
-                            <p class="reviews__box-person">John Doe</p>
-                        </div>
-                    </div>
-                    <div class="reviews__box">
-                        <div class="reviews__box-img"><img src="./dist/img/reviews2.jpg" alt="John Doe"></div>
-                        <div class="reviews__box-info">
-                            <div class="reviews__box-quote">
-                                <i class="fas fa-quote-right"></i>
+                            <div class="reviews__box glide__slide">
+                                <div class="reviews__box-img"><img src="./dist/img/reviews2.webp" alt="John Doe"></div>
+                                <div class="reviews__box-info">
+                                    <div class="reviews__box-quote">
+                                        <i class="fas fa-quote-right"></i>
+                                    </div>
+                                    <p class="reviews__box-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor excepturi
+                                        eligendi,
+                                        officiis odio iste quos natus soluta amet officia. Reiciendis.
+                                    </p>
+                                    <p class="reviews__box-person">John Doe</p>
+                                </div>
                             </div>
-                            <p class="reviews__box-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor excepturi eligendi,
-                                officiis odio iste quos natus soluta amet officia. Reiciendis.
-                            </p>
-                            <p class="reviews__box-person">John Doe</p>
-                        </div>
-                    </div>
-                    <div class="reviews__box">
-                        <div class="reviews__box-img"><img src="./dist/img/reviews3.jpg" alt="Jane Doe"></div>
-                        <div class="reviews__box-info">
-                            <div class="reviews__box-quote">
-                                <i class="fas fa-quote-right"></i>
+                            <div class="reviews__box glide__slide">
+                                <div class="reviews__box-img"><img src="./dist/img/reviews3.webp" alt="Jane Doe"></div>
+                                <div class="reviews__box-info">
+                                    <div class="reviews__box-quote">
+                                        <i class="fas fa-quote-right"></i>
+                                    </div>
+                                    <p class="reviews__box-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor excepturi
+                                        eligendi,
+                                        officiis odio iste quos natus soluta amet officia. Reiciendis.
+                                    </p>
+                                    <p class="reviews__box-person">Jane Doe</p>
+                                </div>
                             </div>
-                            <p class="reviews__box-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor excepturi eligendi,
-                                officiis odio iste quos natus soluta amet officia. Reiciendis.
-                            </p>
-                            <p class="reviews__box-person">John Doe</p>
                         </div>
                     </div>
                 </div>
@@ -275,14 +282,14 @@
                                 <p>Chcesz o coś zapytać?</p>
                                 <p>Skorzystaj z poniższych opcji lub formularza kontaktowego.</p>
                             </div>
-                            <p><i class="fa-solid fa-phone"></i><a class="custom-link" href="callto:+48666855332">+48
+                            <p><i class="fa-solid fa-phone"></i><a class="custom-link" href="tel:+48666855332">+48
                                     666 855 332</a></p>
                             <p><i class="fa-solid fa-at"></i><a class="custom-link" rel="noopener"
                                     href="mailto:biuro@aquaauto.pl" target="_blank">biuro@aquaauto.pl</a></p>
-                            <p><i class="fa-brands fa-facebook"></i><a class="custom-link" rel="noopener"
+                            <p><i class="fa-brands fa-facebook-square"></i><a class="custom-link" rel="noopener"
                                     href="https://www.facebook.com/AquaAuto" target="_blank">Facebook Aqua Auto</a></p>
                             <p><i class="fa-brands fa-instagram"></i><a class="custom-link" rel="noopener"
-                                    href="https://www.instagram.com/aquaauto/" target="_blank">Instagram Aqua Auto</a>
+                                    href="https://www.instagram.com/aquaauto" target="_blank">Instagram Aqua Auto</a>
                             </p>
 
                             <svg class="contact__section-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -326,7 +333,7 @@
         </section>
 
         <section id="map" class="map">
-            <iframe style="border:0" loading="lazy" allowfullscreen
+            <iframe title="Google Map" style="border:0" loading="lazy" allowfullscreen
                 src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbglh1JYFkcRDRpwQLdtChM&key=AIzaSyB4-lje3CcgCl-1KzaxBSxMAPpKuKBoUuM&zoom=13"></iframe>
         </section>
     </main>
@@ -347,29 +354,60 @@
         </div>
     </div>
 
+    <div class="message-error-alert hidden-message-error">
+        <div class="container">
+            <p>Wiadomość nie została wysłana. Spróbuj ponownie później lub wybierz inną formę kontaktu.
+                Przepraszamy.
+            </p>
+            <button class="message-error-btn">Ok</button>
+        </div>
+    </div>
+
     <footer class="footer">
-        <p class="footer__copy">&copy; <span class="footer__year"></span> Aqua Auto</p>
+        <img class="footer__logo" src="./dist/img/logo.webp" alt="Logo Aqua Auto">
+        <div class="footer__adress">
+            <p class="footer__street">ul. św. Idziego 3 <br> 32-085 Giebułtów</p>
+            <a class="footer__directions" href="https://g.page/aquaauto?share" target="_blank" rel="nofollow"><i
+                    class="fa-solid fa-map-location-dot"></i></a>
+        </div>
+        <div class="footer__divider"></div>
+        <div class="footer__opening-hours">
+            <p class="footer__day">Poniedziałek - Piątek</p>
+            <p class="footer__hour">8:00 - 18:00</p>
+            <p class="footer__day">Sobota</p>
+            <p class="footer__hour">9:00 - 15:00</p>
+        </div>
+        </div>
+        <div class="footer__divider"></div>
+        <div class="footer__social">
+            <a rel="noopener" href="https://www.facebook.com/AquaAuto" target="_blank"><i
+                    class="fa-brands fa-facebook-square"></i></a>
+            <a rel="noopener" href="https://www.instagram.com/aquaauto" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p class="footer__copy">&copy;<span class="footer__year"></span> Aqua Auto</p>
         <div class="footer__author">
             <span class="footer__author-text">designed & developed by</span>
             <a href="https://nbworks.pl/" target="_blank" rel="nofollow">
-                <img class="footer__author-logo" src="/dist/img/author-logo.svg">
+                <img class="footer__author-logo" src="/dist/img/author-logo.svg" alt="Logo nbworks">
             </a>
         </div>
+        <a class="footer__scroll" href="#"><i class="fa-solid fa-angle-up"></i></a>
     </footer>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- CDN -->
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.4.0.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('jetpzFVvDXmuKSjpj');
-        })();
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
+    <!-- SCRIPTS -->
+    <script src="./dist/js/glideConfig.min.js"></script>
+    <script src="./dist/js/emailjsConfig.min.js"></script>
     <script src="./dist/js/emailjs.min.js"></script>
-    <script src="./dist/js/slick.min.js"></script>
+    <!-- <script src="./dist/js/slick.min.js"></script> -->
     <script src="./dist/js/main.min.js"></script>
 </body>
 

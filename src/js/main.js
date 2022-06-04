@@ -9,7 +9,8 @@ let logo,
 	contactSection,
 	cookieBox,
 	cookieBtn,
-	messageBtn;
+	messageBtn,
+	messageErrBtn;
 
 const prepareDOMElements = () => {
 	logo = document.querySelector('.navbar__logo');
@@ -24,6 +25,7 @@ const prepareDOMElements = () => {
 	cookieBox = document.querySelector('.cookie-alert');
 	cookieBtn = document.querySelector('.cookie-btn');
 	messageBtn = document.querySelector('.message-btn');
+	messageErrBtn = document.querySelector('.message-error-btn');
 };
 
 const prepareDOMEvents = () => {
@@ -33,6 +35,7 @@ const prepareDOMEvents = () => {
 	menuLinks.forEach(link => link.addEventListener('click', handleActiveClass));
 	cookieBtn.addEventListener('click', hideCookieBox);
 	messageBtn.addEventListener('click', hideMessageBox);
+	messageErrBtn.addEventListener('click', hideMessageErrorBox);
 };
 
 const showMenu = () => {
@@ -70,8 +73,11 @@ const hideCookieBox = () => {
 };
 
 const hideMessageBox = () => {
-	messageBox.classList.remove('show-message');
 	messageBox.classList.add('hidden-message');
+};
+
+const hideMessageErrorBox = () => {
+	messageErrorBox.classList.add('hidden-message-error');
 };
 
 // SCROLLSPY

@@ -357,9 +357,14 @@ body {
 
 .reviews {
 	padding: 1.5em 0;
+	&__boxes {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	&__box {
 		position: relative;
-		margin: 2em;
+		margin: 2em 1.6em 0 0;
 		padding: 1.5em;
 		border-radius: 8px;
 		background-color: $dark-grey;
@@ -561,8 +566,11 @@ body {
 	font-size: 1.4rem;
 	color: $white;
 
-	a:hover {
-		text-decoration: underline;
+	a {
+		color: #8ab4ea;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__box {
@@ -603,29 +611,38 @@ body {
 	display: none;
 }
 
-.show-message {
-	display: block;
+.hidden-message-error {
+	display: none;
 }
 
 .cookie-alert .container,
-.message-alert .container {
+.message-alert .container,
+.message-error-alert .container {
 	display: flex;
 	justify-content: space-evenly;
 }
 
 .cookie-alert,
-.message-alert {
+.message-alert,
+.message-error-alert {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 	padding: 2em;
 	font-size: 1.4rem;
-	background-color: $dark;
+	background-color: $alert;
 	z-index: 1000;
+	a {
+		color: #8ab4ea;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .cookie-btn,
-.message-btn {
+.message-btn,
+.message-error-btn {
 	padding: 1em 2em;
 	margin-left: 1em;
 	background-color: $main-color;
@@ -638,14 +655,84 @@ body {
 /// FOOTER
 
 .footer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	flex-shrink: 0;
 	text-align: center;
+	padding-top: 0.5em;
 	border-top: 1px solid $dark-grey;
-	background-color: $dark;
+	background-color: $black;
+	color: $white;
+
+	&__logo {
+		height: 60px;
+	}
+
+	&__street {
+		margin-bottom: 0.5em;
+	}
+
+	&__directions {
+		margin-top: 2em;
+		font-size: 3rem;
+		color: $white;
+		i {
+			padding: 0.3em;
+			transition: color 0.3s;
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+
+	&__day {
+		font-size: 1.4rem;
+	}
+
+	&__opening-hours p:nth-child(3) {
+		margin-top: 1em;
+	}
+
+	&__divider {
+		margin: 0.8em 0;
+		width: 20%;
+		height: 1px;
+		background-color: $main-color;
+	}
+
+	&__social {
+		font-size: 3rem;
+		color: $white;
+		i {
+			padding: 0.3em;
+			color: $white;
+			transition: color 0.3s;
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
 
 	&__copy {
-		padding: 1.8em 1em 0.5em 1em;
+		padding: 1em 1em 0.5em 1em;
 		font-size: 1.2rem;
+	}
+
+	&__scroll {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin-right: 0.4em;
+		padding: 0.2em;
+		font-size: 4rem;
+		color: $main-color;
+		transition: color 0.3s;
+		&:hover {
+			color: $main-color-darker;
+		}
 	}
 
 	&__author {
@@ -663,6 +750,39 @@ body {
 		margin: -0.32em 0 0 0.12em;
 		height: 10px;
 		vertical-align: middle;
+	}
+}
+
+///
+
+/// ERROR 404
+
+.error {
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		height: 100vh;
+		padding: 10em 2em;
+	}
+	&__icon {
+		font-size: 7rem;
+	}
+	&__text {
+		margin-top: 1em;
+		text-align: center;
+	}
+	&__instruction {
+		margin-top: 1em;
+		font-size: 1.4rem;
+		a {
+			color: #8ab4ea;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }
 
