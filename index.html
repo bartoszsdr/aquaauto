@@ -57,51 +57,52 @@
     </nav>
 
     <header class="header scrollspy" id="header">
-        <div class="wrapper">
-            <div class="header__text">
-                <h1>Zrobimy <br><span class="header__text--underline">wszystko</span><br> dla Twojego samochodu</h1>
-            </div>
+        <div class="header__text">
+            <h1>Zrobimy <span class="header__text-underline">wszystko</span> dla Twojego samochodu</h1>
         </div>
     </header>
 
     <main class="main">
 
-        <section class="offer scrollspy" id="offer">
+        <section class="offer section-padding scrollspy" id="offer">
             <div class="wrapper">
                 <h2 class="section-title">oferta</h2>
                 <div class="offer__boxes">
                     <div class="offer__box">
-                        <h3 class="offer__title"><i class="fa-solid fa-spray-can-sparkles"></i> mycie detailingowe</h3>
+                        <i class="offer__icon fa-solid fa-spray-can-sparkles"></i>
+                        <h3 class="offer__title"> mycie detailingowe</h3>
                         <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="offer__box">
-                        <h3 class="offer__title"><i class="fa-solid fa-shield-halved"></i> ceramiczne powłoki</h3>
+                        <i class="offer__icon fa-solid fa-shield-halved"></i>
+                        <h3 class="offer__title">ceramiczne powłoki</h3>
                         <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="offer__box">
-                        <h3 class="offer__title"><i class="fa-solid fa-car"></i> czyszczenie wnętrza</h3>
+                        <i class="offer__icon fa-solid fa-car"></i>
+                        <h3 class="offer__title">czyszczenie wnętrza</h3>
                         <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="offer__box">
-                        <h3 class="offer__title"><i class="fa-solid fa-key"></i> usługa door-2-door</h3>
+                        <i class="offer__icon fa-solid fa-key"></i>
+                        <h3 class="offer__title">usługa door-2-door</h3>
                         <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="news scrollspy" id="news">
+        <section class="news section-padding scrollspy" id="news">
             <div class="wrapper">
                 <h2 class="section-title">aktualności</h2>
                 <div class="news__box">
                     <div class="fb-page" data-tabs="timeline" data-href="https://www.facebook.com/AquaAuto"
-                        data-width="380" data-hide-cover="false"></div>
+                        data-width="380" data-height="500" data-hide-cover="false"></div>
                 </div>
             </div>
-
         </section>
 
-        <section class="portfolio scrollspy" id="portfolio">
+        <section class="portfolio section-padding scrollspy" id="portfolio">
             <div class="portfolio-section-strip"></div>
             <div class="wrapper">
                 <h2 class="section-title">realizacje</h2>
@@ -112,7 +113,7 @@
                                 alt="Niebieskie BMW M2">
                         </a>
                         <div class="portfolio__text">
-                            <p>BMW M2</p>
+                            <a href="bmw-m2.html">BMW M2</a>
                         </div>
                     </div>
                     <div class="portfolio__box">
@@ -120,7 +121,7 @@
                             <img class="portfolio__img" src="./dist/img/portfolio3-1-small.webp" alt="Czarne BMW 7">
                         </a>
                         <div class="portfolio__text">
-                            <p>BMW 7</p>
+                            <a href="bmw-7.html">BMW 7</a>
                         </div>
                     </div>
                     <div class="portfolio__box">
@@ -129,14 +130,14 @@
                                 alt="Niebieskie Audi RS">
                         </a>
                         <div class="portfolio__text">
-                            <p>Audi RS</p>
+                            <a href="audi-rs.html">Audi RS</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="pricing scrollspy" id="pricing">
+        <section class="pricing section-padding scrollspy" id="pricing">
             <div class="pricing-section-strip"></div>
             <div class="wrapper">
                 <h2 class="section-title">cennik</h2>
@@ -217,7 +218,7 @@
             </div>
         </section>
 
-        <section class="reviews">
+        <section class="reviews section-padding">
             <div class="wrapper">
                 <h2 class="section-title">opinie</h2>
                 <div class="glide">
@@ -271,7 +272,7 @@
             </div>
         </section>
 
-        <section class="contact scrollspy" id="contact">
+        <section class="contact section-padding scrollspy" id="contact">
             <div class="wrapper">
                 <h2 class="section-title">kontakt</h2>
                 <div class="contact__wrapper">
@@ -333,9 +334,11 @@
         </section>
 
         <section id="map" class="map">
-            <iframe title="Google Map" style="border:0" loading="lazy" allowfullscreen
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbglh1JYFkcRDRpwQLdtChM&key=AIzaSyB4-lje3CcgCl-1KzaxBSxMAPpKuKBoUuM&zoom=13"></iframe>
+            <div class="wrapper">
+                <iframe title="Google Map" style="border:0" loading="lazy" allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbglh1JYFkcRDRpwQLdtChM&key=AIzaSyB4-lje3CcgCl-1KzaxBSxMAPpKuKBoUuM&zoom=13"></iframe>
         </section>
+        </div>
     </main>
 
     <div class="cookie-alert">
@@ -364,35 +367,38 @@
     </div>
 
     <footer class="footer">
-        <img class="footer__logo" src="./dist/img/logo.webp" alt="Logo Aqua Auto">
-        <div class="footer__adress">
-            <p class="footer__street">ul. św. Idziego 3 <br> 32-085 Giebułtów</p>
-            <a class="footer__directions" href="https://g.page/aquaauto?share" target="_blank" rel="nofollow"><i
-                    class="fa-solid fa-map-location-dot"></i></a>
+        <div class="wrapper">
+            <img class="footer__logo" src="./dist/img/logo.webp" alt="Logo Aqua Auto">
+            <div class="footer__top">
+                <div class="footer__address">
+                    <p>ul. św. Idziego 3 <br> 32-085 Giebułtów</p>
+                </div>
+                <div class="footer__divider"></div>
+                <div class="footer__opening-hours">
+                    <p class="footer__day">Poniedziałek - Piątek</p>
+                    <p class="footer__hour">8:00 - 18:00</p>
+                    <p class="footer__day">Sobota</p>
+                    <p class="footer__hour">9:00 - 15:00</p>
+                </div>
+
+                <div class="footer__divider"></div>
+                <div class="footer__social">
+                    <a rel="noopener" href="https://www.facebook.com/AquaAuto" target="_blank"><i
+                            class="fa-brands fa-facebook-square"></i></a>
+                    <a rel="noopener" href="https://www.instagram.com/aquaauto" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&copy;<span class="footer__year"></span> Aqua Auto</p>
+            <div class="footer__author">
+                <span class="footer__author-text">designed & developed by</span>
+                <a href="https://nbworks.pl/" target="_blank" rel="nofollow">
+                    <img class="footer__author-logo" src="/dist/img/author-logo.svg" alt="Logo nbworks">
+                </a>
+            </div>
+            <a class="footer__scroll" href="#"><i class="fa-solid fa-angle-up"></i></a>
         </div>
-        <div class="footer__divider"></div>
-        <div class="footer__opening-hours">
-            <p class="footer__day">Poniedziałek - Piątek</p>
-            <p class="footer__hour">8:00 - 18:00</p>
-            <p class="footer__day">Sobota</p>
-            <p class="footer__hour">9:00 - 15:00</p>
-        </div>
-        </div>
-        <div class="footer__divider"></div>
-        <div class="footer__social">
-            <a rel="noopener" href="https://www.facebook.com/AquaAuto" target="_blank"><i
-                    class="fa-brands fa-facebook-square"></i></a>
-            <a rel="noopener" href="https://www.instagram.com/aquaauto" target="_blank"><i
-                    class="fa-brands fa-instagram"></i></a>
-        </div>
-        <p class="footer__copy">&copy;<span class="footer__year"></span> Aqua Auto</p>
-        <div class="footer__author">
-            <span class="footer__author-text">designed & developed by</span>
-            <a href="https://nbworks.pl/" target="_blank" rel="nofollow">
-                <img class="footer__author-logo" src="/dist/img/author-logo.svg" alt="Logo nbworks">
-            </a>
-        </div>
-        <a class="footer__scroll" href="#"><i class="fa-solid fa-angle-up"></i></a>
     </footer>
 
     <!-- CDN -->

@@ -31,11 +31,17 @@ const prepareDOMElements = () => {
 const prepareDOMEvents = () => {
 	logo.addEventListener('click', closeMenu);
 	burgerBtn.addEventListener('click', showMenu);
+	window.addEventListener('resize', deleteClassOnDesktop);
+	window.addEventListener('scroll', handleScrollSpy);
 	menuItems.forEach(item => item.addEventListener('click', closeMenu));
 	menuLinks.forEach(link => link.addEventListener('click', handleActiveClass));
 	cookieBtn.addEventListener('click', hideCookieBox);
 	messageBtn.addEventListener('click', hideMessageBox);
 	messageErrBtn.addEventListener('click', hideMessageErrorBox);
+};
+
+const deleteClassOnDesktop = () => {
+	window.innerWidth > 992 && (menu.classList.remove('show-menu'), burgerBtn.classList.remove('is-active'));
 };
 
 const showMenu = () => {
@@ -173,8 +179,6 @@ gallerySection.forEach(section => {
 ///
 
 /// START
-
-window.addEventListener('scroll', handleScrollSpy);
 
 prepareDOMElements();
 prepareDOMEvents();

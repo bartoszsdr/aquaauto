@@ -1,0 +1,10 @@
+@media (min-width: 576px) {
+	.header {
+		&__text {
+			max-height: 800px;
+			h1 {
+				font-size: 5rem;
+			}
+		}
+	}
+}
