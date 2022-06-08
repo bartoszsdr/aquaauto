@@ -10,7 +10,8 @@ let logo,
 	cookieBox,
 	cookieBtn,
 	messageBtn,
-	messageErrBtn;
+	messageErrBtn,
+	scrollBtn;
 
 const prepareDOMElements = () => {
 	logo = document.querySelector('.navbar__logo');
@@ -26,6 +27,7 @@ const prepareDOMElements = () => {
 	cookieBtn = document.querySelector('.cookie-btn');
 	messageBtn = document.querySelector('.message-btn');
 	messageErrBtn = document.querySelector('.message-error-btn');
+	scrollBtn = document.querySelector('.footer__scroll');
 };
 
 const prepareDOMEvents = () => {
@@ -38,6 +40,7 @@ const prepareDOMEvents = () => {
 	cookieBtn.addEventListener('click', hideCookieBox);
 	messageBtn.addEventListener('click', hideMessageBox);
 	messageErrBtn.addEventListener('click', hideMessageErrorBox);
+	scrollBtn.addEventListener('click', scrollToTop);
 };
 
 const deleteClassOnDesktop = () => {
@@ -86,6 +89,10 @@ const hideMessageErrorBox = () => {
 	messageErrorBox.classList.add('hidden-message-error');
 };
 
+const scrollToTop = () => {
+	window.scrollTo({ top: 0 });
+};
+
 // SCROLLSPY
 
 const handleScrollSpy = () => {
@@ -117,7 +124,7 @@ const handleScrollSpy = () => {
 
 ///.portfolio__box images OBSERVER
 
-const portfolioSectionImg = document.querySelectorAll('.portfolio__box img');
+const portfolioSectionImg = document.querySelectorAll('.portfolio__box');
 
 const observerOne = new IntersectionObserver(
 	entries => {
@@ -132,27 +139,6 @@ const observerOne = new IntersectionObserver(
 );
 portfolioSectionImg.forEach(section => {
 	observerOne.observe(section);
-});
-
-///
-
-///.portfolio__box text OBSERVER
-
-const portfolioSectionText = document.querySelectorAll('.portfolio__box div');
-
-const observerTwo = new IntersectionObserver(
-	entries => {
-		entries.forEach(entry => {
-			entry.target.classList.toggle('animation-two', entry.isIntersecting);
-			if (entry.isIntersecting) observerTwo.unobserve(entry.target);
-		});
-	},
-	{
-		threshold: 0.1,
-	}
-);
-portfolioSectionText.forEach(section => {
-	observerTwo.observe(section);
 });
 
 ///

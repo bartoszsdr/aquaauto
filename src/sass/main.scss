@@ -1,10 +1,6 @@
 @use './reset' as *;
 @use './colors' as *;
 @use './animations' as *;
-@use './xsmall' as *;
-@use './small' as *;
-@use './medium' as *;
-@use './animations' as *;
 
 body {
 	display: flex;
@@ -94,7 +90,7 @@ body {
 	position: relative;
 	margin-top: 80px;
 	height: 100%;
-	max-height: 600px; //
+	max-height: 600px;
 	background-image: url(../../dist/img/header-small.jpg);
 	background-position: 50% 15%;
 	background-size: cover;
@@ -113,16 +109,16 @@ body {
 
 	&__text {
 		display: flex;
-		justify-content: flex-start; //
+		justify-content: flex-start;
 		align-items: flex-start;
 		flex-direction: column;
 		height: 60vh;
-		max-height: 600px; //
-		width: 100%;
-		margin: 1em 0 0 1em; //
+		max-height: 600px;
+		// width: 100%;
+		margin: 1em 0 0 1em;
 		padding: 1em;
 		text-align: left;
-		font-size: 2rem; //
+		font-size: 2rem;
 	}
 
 	&__text-underline {
@@ -146,6 +142,7 @@ body {
 
 	&__box {
 		padding: 1.2em;
+		cursor: default;
 		&:hover {
 			.offer__icon {
 				color: $main-color;
@@ -178,10 +175,47 @@ body {
 	align-items: center;
 	background-color: $dark;
 
-	&__box {
+	&__facebook {
 		width: 100%;
 		text-align: center;
-		// border-radius: 20px;
+	}
+
+	&__box-about {
+		.section-title {
+			margin-top: 2em;
+		}
+	}
+
+	&__about {
+		h3 {
+			margin-bottom: 0.3em;
+		}
+	}
+
+	&__icons {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__icon {
+		padding-top: 2em;
+		text-align: center;
+		img {
+			width: 60px;
+			transition: transform 0.3s;
+		}
+		p {
+			margin-bottom: 0.5em;
+			font-weight: 700;
+			cursor: default;
+		}
+		&:hover {
+			img {
+				transform: scale(0.95);
+			}
+		}
 	}
 }
 
@@ -228,8 +262,8 @@ body {
 
 	&__text {
 		position: absolute;
-		margin-top: -1.5em;
-		left: -30px;
+		margin-top: -1.3em;
+		left: -15px;
 		width: 150px;
 		text-align: center;
 		background-color: $black;
@@ -528,11 +562,13 @@ body {
 
 	&__label {
 		position: absolute;
-		top: 12px;
-		padding: 0 1em;
-		font-size: 1.6rem;
+		left: 15px;
+		top: 3px;
 		color: $grey;
-		transition: transform 0.3s;
+		font-size: 1.6rem;
+		pointer-events: none;
+		transform: translateY(1rem);
+		transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	&__input {
@@ -553,23 +589,27 @@ body {
 		border: 1px solid #d8d8d8;
 		border-radius: 4px;
 		outline: none;
-		color: $grey;
+		color: $white;
 		font-family: 'Poppins', sans-serif;
 		font-size: 1.4rem;
+		transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	&__input:focus,
-	&__textarea:focus {
-		color: rgb(255, 255, 255);
-		border-bottom: 2px solid $main-color;
+	input:valid,
+	&__textarea:focus,
+	textarea:valid {
+		outline: none;
+		border: 1.5px solid $main-color;
 	}
 
-	&__input:focus ~ &__label,
-	&__input:valid ~ &__label,
-	&__textarea:focus ~ &__label,
-	&__textarea:valid ~ &__label {
-		transform: translateY(-24px) translateX(10px);
+	&__input:focus ~ label,
+	&__input:valid ~ label,
+	&__textarea:focus ~ label,
+	&__textarea:valid ~ label {
+		transform: translateY(-60%) scale(0.9);
 		background-color: $black;
+		padding: 0 0.2em;
 		color: $white;
 	}
 
@@ -598,7 +638,7 @@ body {
 	color: $white;
 
 	a {
-		color: #8ab4ea;
+		color: $link;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -652,6 +692,7 @@ body {
 .message-error-alert .container {
 	display: flex;
 	justify-content: space-evenly;
+	align-items: center;
 }
 
 .cookie-alert,
@@ -665,7 +706,7 @@ body {
 	background-color: $alert;
 	z-index: 1000;
 	a {
-		color: #8ab4ea;
+		color: $link;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -749,6 +790,7 @@ body {
 		margin-right: 0.4em;
 		padding: 0.2em;
 		font-size: 4rem;
+		background: none;
 		color: $main-color;
 		transition: color 0.3s;
 		&:hover {
@@ -799,7 +841,7 @@ body {
 		margin-top: 1em;
 		font-size: 1.4rem;
 		a {
-			color: #8ab4ea;
+			color: $link;
 			&:hover {
 				text-decoration: underline;
 			}
@@ -903,7 +945,7 @@ body {
 }
 
 .section-padding {
-	padding: 3em 0;
+	padding: 1.5em 0;
 }
 
 ///
@@ -917,8 +959,8 @@ body {
 @media (min-width: 768px) {
 	.header {
 		max-height: 800px;
-		background-image: url(../../dist/img/header-big5.JPG);
-		background-position: 50% 15%;
+		background-image: url(../../dist/img/header-big.jpg);
+		background-position: 50% 30%;
 
 		&::before {
 			background-color: rgba(0, 0, 0, 0.8);
@@ -931,6 +973,19 @@ body {
 			margin: 0;
 			text-align: center;
 			font-size: 5rem;
+			h1 {
+				text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+				font-size: 5rem;
+			}
+		}
+	}
+	.news {
+		&__icons {
+			flex-direction: row;
+		}
+		&__icon {
+			margin-top: 3em;
+			padding: 0 1.5em;
 		}
 	}
 }
@@ -963,6 +1018,43 @@ body {
 	.offer {
 		&__boxes {
 			flex-direction: row;
+		}
+	}
+
+	.news {
+		&__boxes {
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-start;
+		}
+
+		&__box-facebook {
+			flex-grow: 2;
+		}
+
+		&__facebook {
+			text-align: left;
+		}
+
+		&__box-about {
+			.section-title {
+				margin-top: 0;
+			}
+			flex-wrap: wrap;
+			width: 60%;
+			flex-grow: 3;
+			p {
+				width: 100%;
+			}
+		}
+
+		&__icons {
+			flex-direction: row;
+			margin-top: 2em;
+		}
+
+		&__icon {
+			padding: 0 2em;
 		}
 	}
 
@@ -999,8 +1091,8 @@ body {
 
 	.gallery {
 		// footer stay down
-		// 80px nav + 80px footer = 160px
-		min-height: calc(100vh - 160px);
+		min-height: calc(100vh - 195px);
+
 		&__box {
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -1010,9 +1102,12 @@ body {
 		img {
 			margin: 0.5em;
 			height: 250px;
-			width: 400px;
+			width: 430px;
 			max-width: 100%;
 		}
+	}
+	.section-padding {
+		padding: 2.5em 0;
 	}
 }
 

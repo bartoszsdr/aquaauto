@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aqua Auto - Audi RS</title>
     <meta name="author" content="nbworks.pl">
-    <meta name="description" content="Audi RS">
+    <meta name="description" content="Realizacje - Audi RS">
     <link rel="icon" type="image/png" href="./dist/img/favicon.png">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/a7e8fa5308.js" crossorigin="anonymous"></script>
-    <!-- Slick -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- AnimateCSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- glide.js -->
+    <link rel="stylesheet" href="./dist/css/glide.core.min.css">
     <!-- Calendly -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <!-- Photoswipe -->
@@ -24,22 +19,23 @@
     <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
 
-<body class="main-page">
+<body class="portfolio-page">
 
     <nav class="navbar">
         <div class="container">
             <div class="navbar__nav">
                 <div class="navbar__logo">
-                    <a href="https://seedbite.pl"><img src="/dist/img/logo.webp" alt="Logo Aqua Auto"></a>
+                    <a href="index.html"><img src="/dist/img/logo.webp" alt="Logo Aqua Auto"></a>
                 </div>
                 <ul class="navbar__list">
-                    <li class="navbar__item"><a href="https://seedbite.pl/#offer">oferta</a></li>
-                    <li class="navbar__item"><a href="https://seedbite.pl/#news">aktualności</a></li>
-                    <li class="navbar__item"><a href="https://seedbite.pl/#portfolio">realizacje</a></li>
-                    <li class="navbar__item"><a href="https://seedbite.pl/#news">cennik</a></li>
-                    <li class="navbar__item "><a href="https://seedbite.pl/#contact">kontakt</a></li>
+                    <li class="navbar__item"><a href="index.html#offer">oferta</a></li>
+                    <li class="navbar__item"><a href="index.html#news">aktualności</a></li>
+                    <li class="navbar__item navbar__item--active"><a href="index.html#portfolio">realizacje</a></li>
+                    <li class="navbar__item"><a href="index.html#pricing">cennik</a></li>
+                    <li class="navbar__item "><a href="index.html#contact">kontakt</a></li>
                 </ul>
-                <button class="navbar__burger-btn hamburger hamburger--slider" type="button">
+                <button class="navbar__burger-btn hamburger hamburger--slider" aria-label="Hamburger Menu"
+                    type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
@@ -81,39 +77,88 @@
                         </li>
                     </ul>
                 </div>
-                <div class="gallery__box pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
-                    <a href="./dist/img/portfolio1-1-small.webp" data-pswp-width="800" data-pswp-height="480"
+                <div class="gallery__box pswp-gallery pswp-gallery--single-column" id="gallery-portfolio">
+                    <a href="./dist/img/gallery/audi-rs/img1-big.jpg" data-pswp-width="1366" data-pswp-height="768"
                         data-cropped="true" target="_blank">
-                        <img src="./dist/img/portfolio1-1-small.webp" alt="" />
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="./dist/img/gallery/audi-rs/img1-small.jpg">
+                            <source media="(min-width: 992px)" srcset="./dist/img/gallery/audi-rs/img1-big.jpg">
+                            <img src="./dist/img/gallery/audi-rs/img1-big.jpg" alt="Niebieskie Audi RS">
+                        </picture>
                     </a>
-                    <a href="./dist/img/portfolio1-2-small.jpg" data-pswp-width="800" data-pswp-height="480"
+
+                    <a href="./dist/img/gallery/audi-rs/img2-big.jpg" data-pswp-width="1366" data-pswp-height="768"
                         data-cropped="true" target="_blank">
-                        <img src="./dist/img/portfolio1-2-small.jpg" alt="" />
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="./dist/img/gallery/audi-rs/img2-small.jpg">
+                            <source media="(min-width: 992px)" srcset="./dist/img/gallery/audi-rs/img2-big.jpg">
+                            <img src="./dist/img/gallery/audi-rs/img2-big.jpg" alt="Niebieskie Audi RS">
+                        </picture>
                     </a>
-                    <a href="./dist/img/portfolio1-3-small.jpg" data-pswp-width="800" data-pswp-height="480"
+
+                    <a href="./dist/img/gallery/audi-rs/img3-big.jpg" data-pswp-width="1366" data-pswp-height="768"
                         data-cropped="true" target="_blank">
-                        <img src="./dist/img/portfolio1-3-small.jpg" alt="" />
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="./dist/img/gallery/audi-rs/img3-small.jpg">
+                            <source media="(min-width: 992px)" srcset="./dist/img/gallery/audi-rs/img3-big.jpg">
+                            <img src="./dist/img/gallery/audi-rs/img3-big.jpg" alt="Niebieskie Audi RS">
+                        </picture>
                     </a>
-                    <a href="./dist/img/portfolio1-4-small.jpg" data-pswp-width="800" data-pswp-height="480"
+
+                    <a href="./dist/img/gallery/audi-rs/img4-big.jpg" data-pswp-width="1366" data-pswp-height="768"
                         data-cropped="true" target="_blank">
-                        <img src="./dist/img/portfolio1-4-small.jpg" alt="" />
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="./dist/img/gallery/audi-rs/img4-small.jpg">
+                            <source media="(min-width: 992px)" srcset="./dist/img/gallery/audi-rs/img4-big.jpg">
+                            <img src="./dist/img/gallery/audi-rs/img4-big.jpg" alt="Niebieskie Audi RS">
+                        </picture>
                     </a>
-                    <a href="./dist/img/portfolio1-5-small.jpg" data-pswp-width="800" data-pswp-height="480"
+
+                    <a href="./dist/img/gallery/audi-rs/img5-big.jpg" data-pswp-width="1366" data-pswp-height="768"
                         data-cropped="true" target="_blank">
-                        <img src="./dist/img/portfolio1-5-small.jpg" alt="" />
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="./dist/img/gallery/audi-rs/img5-small.jpg">
+                            <source media="(min-width: 992px)" srcset="./dist/img/gallery/audi-rs/img5-big.jpg">
+                            <img src="./dist/img/gallery/audi-rs/img5-big.jpg" alt="Niebieskie Audi RS">
+                        </picture>
                     </a>
-                    <a href="./dist/img/portfolio1-6-small.jpg" data-pswp-width="800" data-pswp-height="480"
+
+                    <a href="./dist/img/gallery/audi-rs/img6-big.jpg" data-pswp-width="1366" data-pswp-height="768"
                         data-cropped="true" target="_blank">
-                        <img src="./dist/img/portfolio1-6-small.jpg" alt="" />
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="./dist/img/gallery/audi-rs/img6-small.jpg">
+                            <source media="(min-width: 992px)" srcset="./dist/img/gallery/audi-rs/img6-big.jpg">
+                            <img src="./dist/img/gallery/audi-rs/img6-big.jpg" alt="Niebieskie Audi RS">
+                        </picture>
                     </a>
-                    <a href="./dist/img/portfolio1-7-small.jpg" data-pswp-width="800" data-pswp-height="480"
+
+                    <a href="./dist/img/gallery/audi-rs/img7-big.jpg" data-pswp-width="1366" data-pswp-height="768"
                         data-cropped="true" target="_blank">
-                        <img src="./dist/img/portfolio1-7-small.jpg" alt="" />
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="./dist/img/gallery/audi-rs/img7-small.jpg">
+                            <source media="(min-width: 992px)" srcset="./dist/img/gallery/audi-rs/img7-big.jpg">
+                            <img src="./dist/img/gallery/audi-rs/img7-big.jpg" alt="Niebieskie Audi RS">
+                        </picture>
                     </a>
-                    <a href="./dist/img/portfolio1-8-small.jpg" data-pswp-width="800" data-pswp-height="480"
+
+                    <a href="./dist/img/gallery/audi-rs/img8-big.jpg" data-pswp-width="1366" data-pswp-height="768"
                         data-cropped="true" target="_blank">
-                        <img src="./dist/img/portfolio1-8-small.jpg" alt="" />
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="./dist/img/gallery/audi-rs/img8-small.jpg">
+                            <source media="(min-width: 992px)" srcset="./dist/img/gallery/audi-rs/img8-big.jpg">
+                            <img src="./dist/img/gallery/audi-rs/img8-big.jpg" alt="Niebieskie Audi RS">
+                        </picture>
                     </a>
+
+                    <a href="./dist/img/gallery/audi-rs/img9-big.jpg" data-pswp-width="1366" data-pswp-height="768"
+                        data-cropped="true" target="_blank">
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="./dist/img/gallery/audi-rs/img9-small.jpg">
+                            <source media="(min-width: 992px)" srcset="./dist/img/gallery/audi-rs/img9-big.jpg">
+                            <img src="./dist/img/gallery/audi-rs/img9-big.jpg" alt="Niebieskie Audi RS">
+                        </picture>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -129,20 +174,15 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script type="module">
         import PhotoSwipeLightbox from './dist/photoswipe/photoswipe-lightbox.esm.js';
         const lightbox = new PhotoSwipeLightbox({
-            gallery: '#gallery--getting-started',
+            gallery: '#gallery-portfolio',
             children: 'a',
             pswpModule: () => import('./dist/photoswipe/photoswipe.esm.js')
         });
         lightbox.init();
     </script>
-    <script src="./dist/js/slick.min.js"></script>
     <script src="./dist/js/main.min.js"></script>
 </body>
 

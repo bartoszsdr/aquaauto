@@ -3,18 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqua Auto - Myjnia | Detailing | Folie</title>
     <meta name="author" content="nbworks.pl">
+    <title>Aqua Auto - Myjnia | Detailing | Folie</title>
     <meta name="description"
         content="Twój profesjonalny partner w branży detailingu samochodowego. Zajmujemy się profesjonalnym myciem samochodów oraz car detailingiem.">
+    <meta property="og:title" content="Aqua Auto">
+    <meta property="og:description"
+        content="Twój profesjonalny partner w branży detailingu samochodowego. Zajmujemy się profesjonalnym myciem samochodów oraz car detailingiem.">
+    <meta property="og:image" content="https://seedbite.pl/dist/img/logo.webp">
+    <meta name="twitter:title" content="Aqua Auto">
+    <meta property="og:url" content="https://seedbite.pl">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./dist/img/favicon.png">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/a7e8fa5308.js" crossorigin="anonymous"></script>
-    <!-- Slick -->
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
     <!-- glide.js -->
     <link rel="stylesheet" href="./dist/css/glide.core.min.css">
     <!-- Calendly -->
@@ -94,14 +98,46 @@
 
         <section class="news section-padding scrollspy" id="news">
             <div class="wrapper">
-                <h2 class="section-title">aktualności</h2>
-                <div class="news__box">
-                    <div class="fb-page" data-tabs="timeline" data-href="https://www.facebook.com/AquaAuto"
-                        data-width="380" data-height="500" data-hide-cover="false"></div>
+                <div class="news__boxes">
+                    <div class="news__box-facebook">
+                        <h2 class="section-title">aktualności</h2>
+                        <div class="news__facebook">
+                            <div class="fb-page" data-tabs="timeline" data-href="https://www.facebook.com/AquaAuto"
+                                data-width="380" data-height="500" data-hide-cover="false"></div>
+                        </div>
+                    </div>
+
+                    <div class="news__box-about">
+                        <h2 class="section-title">dlaczego my</h2>
+                        <div class="news__about">
+                            <h3>Doświadczenie i profesjonalizm</h3>
+                            <p>Jesteśmy pasjonatami car detailingu. Do każdego samochodu podchodzimy tak, jakbyśmy
+                                szykowali go dla siebie. Nie uznajemy kompromisów w zakresie jakości pracy i
+                                poświęconego czasu. Każda wykonana przez nas usługa musi zostać wykonana najlepiej jak
+                                to możliwe.</p><br>
+                            <p>
+                                Dzięki wieloletniemu doświadczeniu wykorzystujemy wyłącznie wyselekconowane kosmetyki i
+                                powłoki ochronne zapewniające bezkompromisowy efekt końcowy i skuteczność. Efekty naszej
+                                pracy zadziwiają najbardziej wymagających!</p>
+                        </div>
+                        <div class="news__icons">
+                            <div class="news__icon">
+                                <img src="./dist/img/guarantee-certificate.png" alt="">
+                                <p>Gwarancja</p>
+                            </div>
+                            <div class="news__icon">
+                                <img src="./dist/img/laurel.png" alt="">
+                                <p>Doświadczenie</p>
+                            </div>
+                            <div class="news__icon">
+                                <img src="./dist/img/shield.png" alt="">
+                                <p>Bezpieczeństwo</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
         <section class="portfolio section-padding scrollspy" id="portfolio">
             <div class="portfolio-section-strip"></div>
             <div class="wrapper">
@@ -109,7 +145,7 @@
                 <div class="portfolio__boxes">
                     <div class="portfolio__box">
                         <a href="bmw-m2.html">
-                            <img class="portfolio__img" src="./dist/img/portfolio2-1-small.webp"
+                            <img class="portfolio__img" src="./dist/img/gallery/bmw-m2/img1-small.jpg"
                                 alt="Niebieskie BMW M2">
                         </a>
                         <div class="portfolio__text">
@@ -118,7 +154,8 @@
                     </div>
                     <div class="portfolio__box">
                         <a href="bmw-7.html">
-                            <img class="portfolio__img" src="./dist/img/portfolio3-1-small.webp" alt="Czarne BMW 7">
+                            <img class="portfolio__img" src="./dist/img/gallery/bmw-7/img1-small.jpeg"
+                                alt="Czarne BMW 7">
                         </a>
                         <div class="portfolio__text">
                             <a href="bmw-7.html">BMW 7</a>
@@ -126,7 +163,7 @@
                     </div>
                     <div class="portfolio__box">
                         <a href="audi-rs.html">
-                            <img class="portfolio__img" src="./dist/img/portfolio1-1-small.webp"
+                            <img class="portfolio__img" src="./dist/img/gallery/audi-rs/img1-small.jpg"
                                 alt="Niebieskie Audi RS">
                         </a>
                         <div class="portfolio__text">
@@ -221,7 +258,7 @@
         <section class="reviews section-padding">
             <div class="wrapper">
                 <h2 class="section-title">opinie</h2>
-                <div class="glide">
+                <div class="glide-reviews">
                     <div class="glide__track" data-glide-el="track">
                         <div class="reviews__boxes glide__slides">
                             <div class="reviews__box glide__slide">
@@ -231,7 +268,8 @@
                                         <i class="fas fa-quote-right"></i>
                                     </div>
                                     <p class="reviews__box-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor excepturi
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                                        excepturi
                                         eligendi,
                                         officiis odio iste quos natus soluta amet officia. Reiciendis.
                                     </p>
@@ -245,7 +283,8 @@
                                         <i class="fas fa-quote-right"></i>
                                     </div>
                                     <p class="reviews__box-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor excepturi
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                                        excepturi
                                         eligendi,
                                         officiis odio iste quos natus soluta amet officia. Reiciendis.
                                     </p>
@@ -259,7 +298,8 @@
                                         <i class="fas fa-quote-right"></i>
                                     </div>
                                     <p class="reviews__box-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor excepturi
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                                        excepturi
                                         eligendi,
                                         officiis odio iste quos natus soluta amet officia. Reiciendis.
                                     </p>
@@ -286,11 +326,13 @@
                             <p><i class="fa-solid fa-phone"></i><a class="custom-link" href="tel:+48666855332">+48
                                     666 855 332</a></p>
                             <p><i class="fa-solid fa-at"></i><a class="custom-link" rel="noopener"
-                                    href="mailto:biuro@aquaauto.pl" target="_blank">biuro@aquaauto.pl</a></p>
+                                    href="mailto:biuro@aquaauto.pl" target="_blank">biuro@aquaauto.pl</a>
+                            </p>
                             <p><i class="fa-brands fa-facebook-square"></i><a class="custom-link" rel="noopener"
                                     href="https://www.facebook.com/AquaAuto" target="_blank">Facebook Aqua Auto</a></p>
                             <p><i class="fa-brands fa-instagram"></i><a class="custom-link" rel="noopener"
-                                    href="https://www.instagram.com/aquaauto" target="_blank">Instagram Aqua Auto</a>
+                                    href="https://www.instagram.com/aquaauto" target="_blank">Instagram Aqua
+                                    Auto</a>
                             </p>
 
                             <svg class="contact__section-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -327,7 +369,8 @@
                     </form>
                 </div>
                 <p class="privacy-policy">Wypełnienie formularza oznacza, że podane w nim dane osobowe będą
-                    przetwarzane w celu udzielenia odpowiedzi. Jeśli Twoje pytanie będzie odnosić się do naszych
+                    przetwarzane w celu udzielenia odpowiedzi. Jeśli Twoje pytanie będzie odnosić się do
+                    naszych
                     usług, w odpowiedzi możemy przedstawić Ci ofertę. <a href="politykaprywatnosci.html">Dowiedz
                         się, jak przetwarzamy Twoje dane.</a></p>
             </div>
@@ -359,8 +402,8 @@
 
     <div class="message-error-alert hidden-message-error">
         <div class="container">
-            <p>Wiadomość nie została wysłana. Spróbuj ponownie później lub wybierz inną formę kontaktu.
-                Przepraszamy.
+            <p>Wystąpił błąd. Twoja wiadomość nie została wysłana. Spróbuj ponownie później lub wybierz inną formę
+                kontaktu.
             </p>
             <button class="message-error-btn">Ok</button>
         </div>
@@ -383,10 +426,10 @@
 
                 <div class="footer__divider"></div>
                 <div class="footer__social">
-                    <a rel="noopener" href="https://www.facebook.com/AquaAuto" target="_blank"><i
-                            class="fa-brands fa-facebook-square"></i></a>
-                    <a rel="noopener" href="https://www.instagram.com/aquaauto" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/AquaAuto" rel="noopener" target="_blank"
+                        aria-label="Facebook Aqua Auto"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/aquaauto" rel="noopener" target="_blank"
+                        aria-label="Instagram Aqua Auto"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
 
@@ -397,14 +440,11 @@
                     <img class="footer__author-logo" src="/dist/img/author-logo.svg" alt="Logo nbworks">
                 </a>
             </div>
-            <a class="footer__scroll" href="#"><i class="fa-solid fa-angle-up"></i></a>
+            <button class="footer__scroll" aria-label="Scroll to the top"><i class="fa-solid fa-angle-up"></i></button>
         </div>
     </footer>
 
     <!-- CDN -->
-    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.4.0.min.js"></script> -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
@@ -413,7 +453,7 @@
     <script src="./dist/js/glideConfig.min.js"></script>
     <script src="./dist/js/emailjsConfig.min.js"></script>
     <script src="./dist/js/emailjs.min.js"></script>
-    <!-- <script src="./dist/js/slick.min.js"></script> -->
+
     <script src="./dist/js/main.min.js"></script>
 </body>
 

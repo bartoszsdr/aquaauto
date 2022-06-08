@@ -1,4 +1,4 @@
-const config = {
+const configReviews = {
 	type: 'carousel',
 	perView: 3,
 	autoplay: 3000,
@@ -15,4 +15,5 @@ const config = {
 		},
 	},
 };
-new Glide('.glide', config).mount();
+
+new Glide('.glide-reviews', configReviews).mount();
