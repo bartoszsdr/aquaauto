@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Codecave">
-    <title>Aqua Auto - 404</title>
-    <meta name="description" content="404">
+    <title>Aqua Auto - Rezerwacja Standard</title>
+    <meta name="description" content="Aqua Auto - Rezerwacja Standard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./dist/img/favicon.png">
     <!-- Google Fonts -->
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
 
-<body class="error-page">
+<body class="reservation-page">
 
     <nav class="navbar">
         <div class="container">
@@ -41,23 +41,13 @@
         </div>
     </nav>
 
-    <div class="error__box">
-        <h2 class="section-title">error 404</h2>
-        <i class="error__icon fa-solid fa-car-burst"></i>
-        <p class="error__text">przykro nam, strona której szukasz nie istnieje.</p>
-        <p class="error__instruction">Wróć na <a href="index.html">stronę główną</a> lub sprawdź inne podstrony</p>
-    </div>
+    <section class="reservation">
+        <div class="reservation__widget calendly-inline-widget"
+            data-url="https://calendly.com/aquaauto40/standard?hide_gdpr_banner=1"
+            style="min-width:320px;height:700px;"></div>
+    </section>
 
-    <footer class="footer">
-        <p class="footer__copy">&copy; <span class="footer__year"></span> Aqua Auto</p>
-        <div class="footer__author">
-            <span class="footer__author-text">designed & developed by</span>
-            <a href="https://codecave.pl/" target="_blank" rel="nofollow">
-                <img class="footer__author-logo" src="./dist/img/codecave-logo.svg">
-            </a>
-        </div>
-    </footer>
-
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script src="./dist/js/main.min.js"></script>
 </body>
 

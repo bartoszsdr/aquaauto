@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="nbworks.pl">
+    <meta name="author" content="Codecave">
     <title>Aqua Auto - Myjnia | Detailing | Folie</title>
     <meta name="description"
         content="Twój profesjonalny partner w branży detailingu samochodowego. Zajmujemy się profesjonalnym myciem samochodów oraz car detailingiem.">
-    <meta property="og:title" content="Aqua Auto">
+    <meta property="og:title" content="Aqua Auto - Myjnia | Detailing | Folie">
     <meta property="og:description"
         content="Twój profesjonalny partner w branży detailingu samochodowego. Zajmujemy się profesjonalnym myciem samochodów oraz car detailingiem.">
-    <meta property="og:image" content="https://seedbite.pl/dist/img/logo.webp">
-    <meta name="twitter:title" content="Aqua Auto">
-    <meta property="og:url" content="https://seedbite.pl">
+    <meta property="og:image" content="https://aquaauto.pl/dist/img/logo.webp">
+    <meta property="og:url" content="https://aquaauto.pl">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./dist/img/favicon.png">
     <!-- Google Fonts -->
@@ -21,8 +21,6 @@
     <script src="https://kit.fontawesome.com/a7e8fa5308.js" crossorigin="anonymous"></script>
     <!-- glide.js -->
     <link rel="stylesheet" href="./dist/css/glide.core.min.css">
-    <!-- Calendly -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <!-- Photoswipe -->
     <link rel="stylesheet" href="./dist/photoswipe/photoswipe.css">
     <link rel="stylesheet" href="./dist/css/hamburgers.min.css">
@@ -41,7 +39,7 @@
         <div class="container">
             <div class="navbar__nav">
                 <div class="navbar__logo">
-                    <a href="#"><img src="/dist/img/logo.webp" alt="Logo Aqua Auto"></a>
+                    <a href="#"><img src="./dist/img/logo.webp" alt="Logo Aqua Auto"></a>
                 </div>
                 <ul class="navbar__list">
                     <li class="navbar__item"><a href="#offer">oferta</a></li>
@@ -72,27 +70,42 @@
             <div class="wrapper">
                 <h2 class="section-title">oferta</h2>
                 <div class="offer__boxes">
-                    <div class="offer__box">
-                        <i class="offer__icon fa-solid fa-spray-can-sparkles"></i>
-                        <h3 class="offer__title"> mycie detailingowe</h3>
-                        <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="offer__boxes-top">
+                        <div class="offer__box">
+                            <i class="offer__icon fa-solid fa-spray-can-sparkles"></i>
+                            <h3 class="offer__title">auto detailing</h3>
+                            <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="offer__box">
+                            <i class="offer__icon fa-solid fa-shield-halved"></i>
+                            <h3 class="offer__title">powłoki ochronne</h3>
+                            <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="offer__box">
+                            <i class="offer__icon fa-solid fa-car"></i>
+                            <h3 class="offer__title">folie ppf</h3>
+                            <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
                     </div>
-                    <div class="offer__box">
-                        <i class="offer__icon fa-solid fa-shield-halved"></i>
-                        <h3 class="offer__title">ceramiczne powłoki</h3>
-                        <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="offer__box">
-                        <i class="offer__icon fa-solid fa-car"></i>
-                        <h3 class="offer__title">czyszczenie wnętrza</h3>
-                        <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="offer__box">
-                        <i class="offer__icon fa-solid fa-key"></i>
-                        <h3 class="offer__title">usługa door-2-door</h3>
-                        <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="offer__boxes-bottom">
+                        <div class="offer__box">
+                            <i class="offer__icon fa-solid fa-soap"></i>
+                            <h3 class="offer__title">pranie tapicerki</h3>
+                            <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="offer__box">
+                            <i class="offer__icon fa-solid fa-hand-sparkles"></i>
+                            <h3 class="offer__title">myjnia ręczna</h3>
+                            <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="offer__box">
+                            <i class="offer__icon fa-solid fa-hand-holding-droplet"></i>
+                            <h3 class="offer__title">renowacja skór</h3>
+                            <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -200,8 +213,11 @@
                             <i class="fa-solid fa-check"></i>
                             opcja w pakiecie
                         </div>
-                        <button type="button" class="pricing__cta-btn pricing__cta-btn-highlited"
-                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/aquaauto40?hide_gdpr_banner=1'});return false;">Wybierz</button>
+                        <a href='rezerwacja-standard.html'>
+                            <button type="button" class="pricing__cta-btn pricing__cta-btn-highlited">
+                                Wybierz
+                            </button>
+                        </a>
                     </div>
                     <div class="pricing__box">
                         <div class="pricing__price-header">
@@ -224,8 +240,11 @@
                             <i class="fa-solid fa-check"></i>
                             opcja w pakiecie
                         </div>
-                        <button type="button" class="pricing__cta-btn pricing__cta-btn-highlited"
-                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/aquaauto40?hide_gdpr_banner=1'});return false;">Wybierz</button>
+                        <a href='#'>
+                            <button type="button" class="pricing__cta-btn pricing__cta-btn-highlited">
+                                Wybierz
+                            </button>
+                        </a>
                     </div>
                     <div class="pricing__box">
                         <div class="pricing__price-header">
@@ -248,8 +267,11 @@
                             <i class="fa-solid fa-check"></i>
                             opcja w pakiecie
                         </div>
-                        <button type="button" class="pricing__cta-btn pricing__cta-btn-highlited"
-                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/aquaauto40?hide_gdpr_banner=1'});return false;">Wybierz</button>
+                        <a href='#'>
+                            <button type="button" class="pricing__cta-btn pricing__cta-btn-highlited">
+                                Wybierz
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -371,7 +393,7 @@
                 <p class="privacy-policy">Wypełnienie formularza oznacza, że podane w nim dane osobowe będą
                     przetwarzane w celu udzielenia odpowiedzi. Jeśli Twoje pytanie będzie odnosić się do
                     naszych
-                    usług, w odpowiedzi możemy przedstawić Ci ofertę. <a href="politykaprywatnosci.html">Dowiedz
+                    usług, w odpowiedzi możemy przedstawić Ci ofertę. <a href="polityka-prywatnosci.html">Dowiedz
                         się, jak przetwarzamy Twoje dane.</a></p>
             </div>
         </section>
@@ -387,7 +409,7 @@
     <div class="cookie-alert">
         <div class="container">
             <p>Na stronie wykorzystujemy pliki cookies, aby zbierać dane dotyczące ruchu na stronie (np. ilość
-                miesięcznych odwiedzin). <br>Więcej informacji znajdziesz w <a href="politykaprywatnosci.html">polityce
+                miesięcznych odwiedzin). <br>Więcej informacji znajdziesz w <a href="polityka-prywatnosci.html">polityce
                     prywatności</a>.</p>
             <button class="cookie-btn">Akceptuj</button>
         </div>
@@ -436,8 +458,8 @@
             <p class="footer__copy">&copy;<span class="footer__year"></span> Aqua Auto</p>
             <div class="footer__author">
                 <span class="footer__author-text">designed & developed by</span>
-                <a href="https://nbworks.pl/" target="_blank" rel="nofollow">
-                    <img class="footer__author-logo" src="/dist/img/author-logo.svg" alt="Logo nbworks">
+                <a href="https://codecave.pl/" target="_blank" rel="nofollow">
+                    <img class="footer__author-logo" src="./dist/img/codecave-logo.svg" alt="Logo Codecave">
                 </a>
             </div>
             <button class="footer__scroll" aria-label="Scroll to the top"><i class="fa-solid fa-angle-up"></i></button>
@@ -445,7 +467,6 @@
     </footer>
 
     <!-- CDN -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 

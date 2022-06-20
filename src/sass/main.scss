@@ -13,8 +13,8 @@ body {
 
 @font-face {
 	font-family: 'archia';
-	src: url('/fonts/archia-regular-webfont.woff2') format('woff2'),
-		url('/fonts/archia-regular-webfont.woff') format('woff');
+	src: url('../../dist/fonts/archia-regular-webfont.woff2') format('woff2'),
+		url('../../dist/fonts/archia-regular-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -39,8 +39,8 @@ body {
 
 	&__logo {
 		img {
-			margin: 0.7em 0 0 0.6em;
 			height: 65px;
+			vertical-align: middle;
 		}
 	}
 
@@ -335,26 +335,24 @@ body {
 
 	&__boxes {
 		display: flex;
-		align-items: center;
 		justify-content: center;
+		align-items: center;
 		flex-direction: column;
+		width: 100%;
+		// margin: 1em;
+		// padding: 3em 0;
 	}
 
 	&__box {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
 		flex-grow: 1;
 		flex-basis: 0;
-		margin: 1.5em 1.5em;
-		padding: 1.5em;
+		margin: 1em 1.5em;
+		padding: 1em;
 		max-width: 275px;
 		border-radius: 8px;
 		background-color: $white;
 		color: $black;
 		box-shadow: 0 0 10px rgba(52, 31, 97, 0.5);
-		z-index: 1;
 	}
 
 	&__price-header {
@@ -673,6 +671,15 @@ body {
 
 ///
 
+/// RESERVATION PAGE
+.reservation {
+	&__widget {
+		margin-top: 5em;
+	}
+}
+
+///
+
 /// COOKIES & MESSAGE ALERTS
 
 .hidden-cookies {
@@ -692,7 +699,6 @@ body {
 .message-error-alert .container {
 	display: flex;
 	justify-content: space-evenly;
-	align-items: center;
 }
 
 .cookie-alert,
@@ -733,7 +739,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	// flex-shrink: 0;
 	text-align: center;
 	padding-top: 0.5em;
 	border-top: 1px solid $dark-grey;
@@ -810,8 +815,8 @@ body {
 	}
 
 	&__author-logo {
-		margin: -0.32em 0 0 0.12em;
-		height: 10px;
+		margin-top: -0.05em;
+		height: 14px;
 		vertical-align: middle;
 	}
 }
@@ -950,7 +955,12 @@ body {
 
 ///
 
-@media (min-width: 500px) {
+@media (min-width: 340px) {
+	.pricing {
+		&__box {
+			padding: 2em;
+		}
+	}
 }
 
 @media (min-width: 576px) {
@@ -979,6 +989,7 @@ body {
 			}
 		}
 	}
+
 	.news {
 		&__icons {
 			flex-direction: row;
@@ -986,6 +997,12 @@ body {
 		&__icon {
 			margin-top: 3em;
 			padding: 0 1.5em;
+		}
+	}
+
+	.privacy-policy {
+		&__box {
+			min-height: calc(100vh - 220px);
 		}
 	}
 }
@@ -1006,10 +1023,12 @@ body {
 			background: none;
 			overflow: hidden;
 		}
+
 		&__item {
 			margin-top: 0;
 			font-size: 1.6rem;
 		}
+
 		&__burger-btn {
 			display: none;
 		}
@@ -1018,6 +1037,10 @@ body {
 	.offer {
 		&__boxes {
 			flex-direction: row;
+			justify-content: space-around;
+		}
+		&__box {
+			padding: 2em;
 		}
 	}
 
@@ -1089,10 +1112,12 @@ body {
 		}
 	}
 
-	.gallery {
-		// footer stay down
+	.portfolio-page,
+	.error-page {
 		min-height: calc(100vh - 195px);
+	}
 
+	.gallery {
 		&__box {
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -1100,12 +1125,15 @@ body {
 		}
 
 		img {
+			width: 425px;
+			height: 256px;
+			max-width: 600px;
+			object-fit: cover;
+			object-position: center;
 			margin: 0.5em;
-			height: 250px;
-			width: 430px;
-			max-width: 100%;
 		}
 	}
+
 	.section-padding {
 		padding: 2.5em 0;
 	}
@@ -1115,15 +1143,13 @@ body {
 	.contact__wrapper {
 		display: flex;
 	}
-}
-@media (min-width: 1150px) {
+
 	.contact__section {
 		margin-bottom: 0;
 		margin-right: 2em;
 		width: 30%;
 	}
-}
-@media (min-width: 1150px) {
+
 	.contact__form {
 		width: 70%;
 	}
