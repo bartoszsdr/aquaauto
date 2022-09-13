@@ -424,10 +424,13 @@ body {
 .reviews {
 	&__boxes {
 		display: flex;
-		justify-content: center;
+		justify-content: space-evenly;
 		align-items: center;
 	}
 	&__box {
+		display: flex;
+		flex-direction: column;
+		width: 30%;
 		position: relative;
 		margin: 2em 1.6em 0 0;
 		padding: 1.5em;
@@ -439,17 +442,10 @@ body {
 			transform: scale(0.95);
 		}
 	}
-	&__box-img {
-		position: absolute;
-		top: 8%;
-		left: 75%;
-		transform: translate(-50%, -50%);
-		img {
-			width: 80px;
-			height: 80px;
-			object-fit: cover;
-			border-radius: 50%;
-		}
+	&__box-info {
+		display: flex;
+		flex-direction: column;
+		min-height: 220px;
 	}
 	&__box-quote {
 		margin-bottom: 0.8em;
@@ -460,8 +456,14 @@ body {
 		margin-bottom: 1em;
 		font-size: 1.4rem;
 		color: $white;
+		a {
+			font-size: 1.4rem;
+			color: $white;
+			text-decoration: underline;
+		}
 	}
 	&__box-person {
+		margin-top: auto;
 		font-weight: 700;
 	}
 }
@@ -1102,6 +1104,12 @@ body {
 		}
 	}
 
+	.reviews {
+		&__box-info {
+			min-height: 380px;
+		}
+	}
+
 	.footer {
 		&__top {
 			flex-direction: row;
@@ -1140,6 +1148,12 @@ body {
 }
 
 @media (min-width: 1150px) {
+	.reviews {
+		&__box-info {
+			min-height: 280px;
+		}
+	}
+
 	.contact__wrapper {
 		display: flex;
 	}
