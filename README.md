@@ -11,7 +11,4 @@ Website project for a company specializing in car detailing business.
 - Using powerful developer dependencies like Gulp, SASS and Babel,
 - Features clean and intuitive contact form.
 
-
-## Preview
-Go to https://codecave.pl/previews/aquaauto/ for a website preview.<br>
 Please note that not all texts, pricings and links are ready as this website is not deployed yet.<br>
