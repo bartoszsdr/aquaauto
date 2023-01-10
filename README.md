@@ -1,5 +1,5 @@
 # Aqua Auto Website
-Website project for a company specializing in car detailing business.
+Website project* for a company specializing in car detailing business.
 
 ## Technology and features
 - Responsive website using semantic HTML, CSS and JavaScript,
@@ -11,4 +11,7 @@ Website project for a company specializing in car detailing business.
 - Using powerful developer dependencies like Gulp, SASS and Babel,
 - Features clean and intuitive contact form.
 
-Please note that not all texts, pricings and links are ready as this website is not deployed yet.<br>
+*Please note that not all texts, pricings and links are in the final state as this website is not deployed yet.<br>
+
+## Preview
+<p align="left"><img align="center" width="1000" src="https://i.imgur.com/3oxvVZv.png"/></p>
